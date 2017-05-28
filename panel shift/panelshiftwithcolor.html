@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+<!-- add the dependency for angular js-->
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="angular.min.js"></script>
+    <script src="panelshift.js"></script>
+   
+    <meta charset="UTF-8">
+    <title>Panel Shift information</title>
+</head>
+<body ng-controller="mycontroller">
+    <div class="row">
+        <div class="col-lg-8 panel" style="height:300px;border:1px solid black;">
+            <div class="row">
+                <div class="col-lg-3">
+                    <input type="text" ng-model="item.name" placeholder="Enter Name"/>
+                </div>
+                <div class="col-lg-3">
+                    <input type="text" ng-model="item.address" placeholder="address"/>
+                </div>
+                <div class="col-lg-3">
+                    <input type="text" ng-model="item.status" placeholder="Status"  ng-keyup="$event.keyCode == 13 ? process(item) : null"/>
+                </div>
+            </div>
+             <div class="row">
+                <div class="col-lg-3">
+                    <input type="text" ng-model="name" placeholder="Enter Name"/>
+                </div>
+                <div class="col-lg-3">
+                    <input type="text" ng-model="address" placeholder="address"/>
+                </div>
+                <div class="col-lg-3">
+                    <input type="text" ng-model="status" placeholder="Status"/>
+                </div>
+            </div>
+            <div class="row">
+                <button class="col-lg-3" style="margin: 100px 100px;" ng-click="process(item);">
+                    Submit
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 panel" style="height: 200px;border:1px solid black; padding-top:20px;">
+            <div class="col-lg-2 panel" ng-repeat= "dash in element | limitTo: 5" style="height: 150px;margin-left:20px; border: 2px solid {{dash.color}};">
+                <input type="text" ng-model="dash.name" style="margin-top:50px;"/>
+                 <input type="text" ng-model="dash.address" style="margin-top:20px;"/>
+            </div>
+            
+        </div>     
+    </div>
+</body> 
+</html>
