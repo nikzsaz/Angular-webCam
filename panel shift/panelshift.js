@@ -31,4 +31,14 @@ var MyApp=angular
             $scope.item = "";
             console.log("This is key up");
         }
+        /**
+        $scope.printDiv = function(divName) {
+                var printContents = document.getElementById(divName).innerHTML;
+                var originalContents = document.body.innerHTML;
+                var logoContent = document.getElementById("logo").outerHTML;
+
+                document.body.innerHTML = printContents;
+                window.print();
+                document.body.innerHTML = originalContents;
+}**/
         });
