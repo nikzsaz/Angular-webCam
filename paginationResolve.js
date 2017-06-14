@@ -18,3 +18,4 @@ angular.module('ui.bootstrap.demo').controller('PaginationDemoCtrl', function ($
   $scope.bigTotalItems = 20;
   $scope.bigCurrentPage = 1;
 });
+http://jsfiddle.net/g30rg3/p5a1zLrz/
