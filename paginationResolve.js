@@ -18,4 +18,13 @@ angular.module('ui.bootstrap.demo').controller('PaginationDemoCtrl', function ($
   $scope.bigTotalItems = 20;
   $scope.bigCurrentPage = 1;
 });
-http://jsfiddle.net/g30rg3/p5a1zLrz/
+//http://jsfiddle.net/g30rg3/p5a1zLrz/
+/* $scope.ngGridFIx = function() {
+*   window.dispatchEvent(new Event('resize'));
+*  }
+*
+* <tab select="ngGridFix()"> ... </tab>
+*
+*
+*
+*/
